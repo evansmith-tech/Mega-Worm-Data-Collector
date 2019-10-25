@@ -1,11 +1,11 @@
-# import Control
+from .stepperSwitchControls import Control
 from .camera import Camera
 from datetime import datetime
 
 # todo finish the control library, pull the final version down then import it like a file
-control = None  # todo this is here to prevent errors until control is done
 
-# control = Control()
+
+control = Control()
 cam = Camera()
 
 
@@ -16,7 +16,7 @@ def main():
         while control.y_currentPos <= control.endOfY:  # should we use range tolerance? range(control.endOfY, control.endOfY + 5)
             while control.x_currentPos <= control.endOfX:
                 print(f'Recording chip on Array: [{control.currentChipXY[0]}, {control.currentChipXY[1]}]')
-                cam.record(5, returnFilePath(), 10)  # 5 seconds, filename, 10 fps
+                cam.record(5, generateFilePath(), 10)  # 5 seconds, filename, 10 fps
                 control.moveToNextChip()
             print("Finished this Row")
             control.moveUpRow()
@@ -30,7 +30,7 @@ main()
 
 
 # todo change chipNum param to control.currentChipNum
-def returnFilePath():
+def generateFilePath():
     now = datetime.now()
     datetime_str = now.strftime("%d/%m/%Y_%H:%M:%S")
     #todo decide on naming schema with sid
