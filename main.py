@@ -1,15 +1,12 @@
 from .stepperSwitchControls import Control
 from .camera import Camera
 from datetime import datetime
-
 # todo finish the control library, pull the final version down then import it like a file
-
 
 control = Control()
 cam = Camera()
+control.calibrate()
 
-
-# control.calibrate()
 def main():
     running_flag = True
     while running_flag:
@@ -28,10 +25,13 @@ def main():
 
 main()
 
-
 # todo change chipNum param to control.currentChipNum
 def generateFilePath():
     now = datetime.now()
     datetime_str = now.strftime("%d/%m/%Y_%H:%M:%S")
     #todo decide on naming schema with sid
     return f'{control.currentChipNum}_{datetime_str}_'
+
+
+
+    

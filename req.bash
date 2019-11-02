@@ -1,0 +1,1 @@
+apt-get install -y freeglut3-dev libgstreamer-plugins-base0.10-dev libwebkitgtk-3.0-dev 
