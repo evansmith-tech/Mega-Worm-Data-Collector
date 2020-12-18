@@ -10,7 +10,7 @@ To start: `python3 main.py`
 
 This software was created to run a big machine that can move a camera around, and record a certain "cell".
 Each cell is essentially a 2 dimensional section, and the machine is built around a BUNCH of these cells. The cells are rectangular and laid out in a grid pattern.
-Essentially the machine has a rasberry pi or other UNIX computer hooked up to it, which acts as the controller. The actual software of this controller is this project.
+Essentially the machine has a raspberry pi or other UNIX computer hooked up to it, which acts as the controller. The actual software of this controller is this project.
 
 # My thoughts when designing this software (and first impressions on its predecessor)
   I inherited code to this project that was... quite overdone. While It had a GUI, the version I inherited was broken anyway, and the project was made up of something like 20-40 different non-dependancy files written in C/C++ (or a similar lower level language). Obviously this isn't a BIG deal when you have a BIG project, but for this, I thought I could do better. It also had not been worked in a while, and the author graduated university and wasn't maintaining it anymore.  The professor also specified he would like to get this machine in the hands of non-programmers (mainly biologists), so them modifying the code in any sort of way was out of the question with the old software architecture. Taking this into account, I made a business decision to go ahead and see if I could rewrite this in both a friendlier language, and in a friendlier way. Another goal was to make this code as flexible, nonspaghettied as possible and easy to scale (cell wise).
