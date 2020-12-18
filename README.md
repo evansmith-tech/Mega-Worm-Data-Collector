@@ -27,5 +27,5 @@ Essentially the machine has a raspberry pi or other UNIX computer hooked up to i
   Both of these tools don't need to be used together, and are not dependent on each other.
 
 # Me using my libraries to make main.py
-  My implementation outside of my libraries is about 31 lines including import statements. The main method is defined with 21 lines of code, some of which are print statements in lieu of a GUI (for now). A GUI could easily be built on top of this, especially since all camera and movement logic is abstracted out to a very simple set of flexible, interconnectable tools available for even the most basic of scriptors in the biology lab.
+  My implementation outside of my libraries is about 31 lines including import statements. The main method is defined with 21 lines of code, some of which are print statements in lieu of a GUI (for now). A GUI could easily be built on top of this, especially since all camera and movement logic is abstracted out to a very simple set of flexible, inter-connectable  tools available for even the most basic of scripters in the biology lab.
 It reads like English.
