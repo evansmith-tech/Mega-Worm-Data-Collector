@@ -2,6 +2,10 @@ import cv2
 import time
 import os
 
+# File that does Camera stuff
+# Uses OpenCV2 python stuff, so its kinda finicky, but these settings worked for me at the time
+# Has its own repo here: https://github.com/evansmith-tech/easy-camera-opencv
+
 class Camera:
     vid_capture = cv2.VideoCapture(0)
     vid_cod = cv2.VideoWriter_fourcc(*'XVID')
